@@ -1,0 +1,5 @@
+FROM alpine:3.17.1
+
+RUN apk update \
+    && apk add --no-cache git buildah podman \
+    && rm -rf /var/cache/apk/* /tmp/* /sbin/halt /sbin/poweroff /sbin/reboot
